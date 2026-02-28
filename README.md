@@ -4,7 +4,7 @@
 
 ## Algorithms
 
-The main algorithms from the paper are implemented in the `src/` directory:
+The main algorithms from the paper are implemented in the `src/alg/` directory:
 
 * **Algorithm 1: Pruning of $S$ (or Retrieval of $R$ ) using Biased Sampling**: Implemented in `src/biased_sampling.py` and used by the hybrid methods in `src/hybrid_sampling.py`.
 * **Algorithm 2: Virtual Grid Based Algorithm**: Implemented as `virtual_grid_based_algorithm` in `src/grid_iadu.py` for approximating $S^S$ scores.
@@ -35,7 +35,7 @@ The experiments use queries derived from the datasets **DBpedia** and **YAGO2**,
 
 #### Generating Queries
 
-Run the generator scripts (`src/dbpedia_query_generator.py` and `src/yago2_query_generator.py`) to process raw data (like `pid.txt`). These scripts create `.pkl` files containing queries (subsets of places) for different $K$ values.
+Run the generator scripts (`src/scripts/dbpedia_query_generator.py` and `src/scripts/yago2_query_generator.py`) to process raw data (`pid.txt` files). These scripts create `.pkl` files containing queries (subsets of places) for different $K$ values.
 
 Move the generated `.pkl` files from their output folders (`dbpedia_output/` and `yago_square/`) into the `datasets/` directory so the experiment scripts can find them.
 
@@ -46,12 +46,12 @@ Move the generated `.pkl` files from their output folders (`dbpedia_output/` and
 
 ### 4. **Running the Experiments**
 
-The experiment scripts are located in the `src/exp/` directory. To run an experiment, you can execute the desired Python script from the `src/` directory.
+The experiment scripts are located in the `src/exp/` directory. To run an experiment, you can execute the desired Python script from the root directory.
 
-For example, to run the `hardcore_exp.py` experiment, you would run the following command from the root of the project:
+For example, to run the `hardcore_exp_new.py` experiment, you would run the following command from the root of the project:
 
 ```bash
-python src/exp/hardcore_exp.py
+python python src/exp/hardcore_exp_new.py
 ```
 
 This will run the experiment with the parameters you have defined in `src/config.py`. The script will likely iterate through all the configured datasets, grid sizes, and other parameters, running the necessary algorithms and saving the results.
