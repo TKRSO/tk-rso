@@ -39,6 +39,8 @@ Run the generator scripts (`src/scripts/dbpedia_query_generator.py` and `src/scr
 
 Move the generated `.pkl` files from their output folders (`dbpedia_output/` and `yago_square/`) into the `datasets/` directory so the experiment scripts can find them.
 
+Details on how we built FAISS embedding can be found here: [https://anonymous.4open.science/r/sg27/faiss_experiments/README.md]
+
 * **DBpedia**: [https://www.dbpedia.org](https://www.dbpedia.org)
 * **YAGO2**: [https://www.mpi-inf.mpg.de/departments/databases-andinformation-systems/research/yago-naga/yago/](https://www.mpi-inf.mpg.de/departments/databases-andinformation-systems/research/yago-naga/yago/)
 
